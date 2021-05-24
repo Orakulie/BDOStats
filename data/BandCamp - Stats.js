@@ -1,6 +1,6 @@
 rawData = [
     {
-        "name": "CornerMCdougle",
+        "familyname": "CornerMCdougle",
         "party": "Def",
         "gs": 636,
         "class": "Striker",
@@ -15,10 +15,11 @@ rawData = [
         "nw1605": "(10, 10)",
         "nw1705": "-",
         "nw1905": "-",
-        "nw2305": "-"
+        "nw2305": "-",
+        "nw2405": "-"
     },
     {
-        "name": "Hoizemann",
+        "familyname": "Hoizemann",
         "party": "Main",
         "gs": 666,
         "class": "Guardian",
@@ -33,10 +34,11 @@ rawData = [
         "nw1605": "-",
         "nw1705": "(22, 24)",
         "nw1905": "(47, 24)",
-        "nw2305": "(55, 2)"
+        "nw2305": "(55, 2)",
+        "nw2405": "-"
     },
     {
-        "name": "Nitenage",
+        "familyname": "Nitenage",
         "party": "Main",
         "gs": 633,
         "class": "Striker",
@@ -51,10 +53,11 @@ rawData = [
         "nw1605": "(37, 20)",
         "nw1705": "(11, 24)",
         "nw1905": "(10, 29)",
-        "nw2305": "(13, 5)"
+        "nw2305": "(13, 5)",
+        "nw2405": "(13, 7)"
     },
     {
-        "name": "Oracl3",
+        "familyname": "Oracl3",
         "party": "Main",
         "gs": 632,
         "class": "Hash",
@@ -69,10 +72,11 @@ rawData = [
         "nw1605": "(16, 22)",
         "nw1705": "(18, 13)",
         "nw1905": "(22, 28)",
-        "nw2305": "(53, 3)"
+        "nw2305": "(53, 3)",
+        "nw2405": "(31, 5)"
     },
     {
-        "name": "Elynaeris",
+        "familyname": "Elynaeris",
         "party": "Flex",
         "gs": 665,
         "class": "Guardian",
@@ -87,10 +91,11 @@ rawData = [
         "nw1605": "(39, 22)",
         "nw1705": "(12, 12)",
         "nw1905": "(30, 20)",
-        "nw2305": "(27, 6)"
+        "nw2305": "(27, 6)",
+        "nw2405": "(24, 0)"
     },
     {
-        "name": "Distarfas",
+        "familyname": "Distarfas",
         "party": "Flex",
         "gs": 632,
         "class": "Witch",
@@ -105,10 +110,11 @@ rawData = [
         "nw1605": "-",
         "nw1705": "(22, 15)",
         "nw1905": "(27, 22)",
-        "nw2305": "(29, 1)"
+        "nw2305": "(29, 1)",
+        "nw2405": "(18, 7)"
     },
     {
-        "name": "Mint",
+        "familyname": "Mint",
         "party": "Main",
         "gs": 592,
         "class": "Archer",
@@ -123,10 +129,11 @@ rawData = [
         "nw1605": "(31, 21)",
         "nw1705": "-",
         "nw1905": "(34, 19)",
-        "nw2305": "(25, 2)"
+        "nw2305": "(25, 2)",
+        "nw2405": "(14, 5)"
     },
     {
-        "name": "Basmann",
+        "familyname": "Basmann",
         "party": "Main",
         "gs": 653,
         "class": "Wizard",
@@ -141,10 +148,11 @@ rawData = [
         "nw1605": "(17, 34)",
         "nw1705": "(13, 27)",
         "nw1905": "(24, 26)",
-        "nw2305": "(16, 8)"
+        "nw2305": "(16, 8)",
+        "nw2405": "(15, 4)"
     },
     {
-        "name": "EflCaller",
+        "familyname": "EflCaller",
         "party": "Main",
         "gs": 637,
         "class": "Ranger",
@@ -159,10 +167,11 @@ rawData = [
         "nw1605": "(33, 27)",
         "nw1705": "(7, 24)",
         "nw1905": "(26, 24)",
-        "nw2305": "-"
+        "nw2305": "-",
+        "nw2405": "(16, 5)"
     },
     {
-        "name": "Kreatine",
+        "familyname": "Kreatine",
         "party": "Main",
         "gs": 582,
         "class": "Wizard",
@@ -177,10 +186,11 @@ rawData = [
         "nw1605": "-",
         "nw1705": "-",
         "nw1905": "-",
-        "nw2305": "-"
+        "nw2305": "-",
+        "nw2405": "-"
     },
     {
-        "name": "Kamigaminoou",
+        "familyname": "Kamigaminoou",
         "party": "Main",
         "gs": 609,
         "class": "Ninja",
@@ -195,10 +205,11 @@ rawData = [
         "nw1605": "(34, 34)",
         "nw1705": "(17, 28)",
         "nw1905": "(24, 25)",
-        "nw2305": "(27, 7)"
+        "nw2305": "(27, 7)",
+        "nw2405": "-"
     },
     {
-        "name": "VanDerSock",
+        "familyname": "VanDerSock",
         "party": "Def",
         "gs": 689,
         "class": "Sage",
@@ -213,10 +224,11 @@ rawData = [
         "nw1605": "(18, 12)",
         "nw1705": "(6, 10)",
         "nw1905": "-",
-        "nw2305": "(12, 2)"
+        "nw2305": "(12, 2)",
+        "nw2405": "(2, 3)"
     },
     {
-        "name": "Lucideus",
+        "familyname": "Lucideus",
         "party": "Flex",
         "gs": 591,
         "class": "Nova",
@@ -231,10 +243,11 @@ rawData = [
         "nw1605": "(25, 20)",
         "nw1705": "(14, 24)",
         "nw1905": "(35, 18)",
-        "nw2305": "(16, 3)"
+        "nw2305": "(16, 3)",
+        "nw2405": "(14, 4)"
     },
     {
-        "name": "GumbusMaximus",
+        "familyname": "GumbusMaximus",
         "party": "Main",
         "gs": 550,
         "class": "Shai",
@@ -249,10 +262,11 @@ rawData = [
         "nw1605": "-",
         "nw1705": "-",
         "nw1905": "-",
-        "nw2305": "-"
+        "nw2305": "-",
+        "nw2405": "-"
     },
     {
-        "name": "Metis",
+        "familyname": "Metis",
         "party": "Main",
         "gs": 623,
         "class": "Nova",
@@ -267,10 +281,11 @@ rawData = [
         "nw1605": "(79, 25)",
         "nw1705": "-",
         "nw1905": "(69, 21)",
-        "nw2305": "(41, 5)"
+        "nw2305": "(41, 5)",
+        "nw2405": "(14, 3)"
     },
     {
-        "name": "Plutonyum",
+        "familyname": "Plutonyum",
         "party": "Flex",
         "gs": 628,
         "class": "Hash",
@@ -285,10 +300,11 @@ rawData = [
         "nw1605": "(25, 20)",
         "nw1705": "(29, 24)",
         "nw1905": "-",
-        "nw2305": "(25, 5)"
+        "nw2305": "(25, 5)",
+        "nw2405": "(15, 8)"
     },
     {
-        "name": "Pjepjega",
+        "familyname": "Pjepjega",
         "party": "Main",
         "gs": 645,
         "class": "Hash",
@@ -303,10 +319,11 @@ rawData = [
         "nw1605": "(46, 20)",
         "nw1705": "(15, 23)",
         "nw1905": "(16, 29)",
-        "nw2305": "(29, 2)"
+        "nw2305": "(29, 2)",
+        "nw2405": "(14, 4)"
     },
     {
-        "name": "FromtheBakery",
+        "familyname": "FromtheBakery",
         "party": "Main",
         "gs": 648,
         "class": "Valk",
@@ -321,10 +338,11 @@ rawData = [
         "nw1605": "(30, 23)",
         "nw1705": "(24, 19)",
         "nw1905": "(22, 22)",
-        "nw2305": "(27, 7)"
+        "nw2305": "(27, 7)",
+        "nw2405": "(13, 7)"
     },
     {
-        "name": "Lost_Soldier",
+        "familyname": "Lost_Soldier",
         "party": "Def",
         "gs": 671,
         "class": "Archer",
@@ -339,10 +357,11 @@ rawData = [
         "nw1605": "(8, 14)",
         "nw1705": "(4, 15)",
         "nw1905": "(1, 6)",
-        "nw2305": "(1, 2)"
+        "nw2305": "(1, 2)",
+        "nw2405": "-"
     },
     {
-        "name": "BubbleMint",
+        "familyname": "BubbleMint",
         "party": "Flex",
         "gs": 619,
         "class": "DK",
@@ -357,10 +376,11 @@ rawData = [
         "nw1605": "(70, 19)",
         "nw1705": "(15, 28)",
         "nw1905": "(36, 24)",
-        "nw2305": "(29, 5)"
+        "nw2305": "(29, 5)",
+        "nw2405": "-"
     },
     {
-        "name": "BlackSatans",
+        "familyname": "BlackSatans",
         "party": "Main",
         "gs": 581,
         "class": "Lahn",
@@ -375,10 +395,11 @@ rawData = [
         "nw1605": "-",
         "nw1705": "-",
         "nw1905": "-",
-        "nw2305": "-"
+        "nw2305": "-",
+        "nw2405": "-"
     },
     {
-        "name": "FantomSVK",
+        "familyname": "FantomSVK",
         "party": "Main",
         "gs": 583,
         "class": "Warrior",
@@ -393,10 +414,11 @@ rawData = [
         "nw1605": "-",
         "nw1705": "-",
         "nw1905": "(5, 26)",
-        "nw2305": "(8, 9)"
+        "nw2305": "(8, 9)",
+        "nw2405": "-"
     },
     {
-        "name": "Nibbizz",
+        "familyname": "Nibbizz",
         "party": "Main",
         "gs": 588,
         "class": "Ninja",
@@ -411,10 +433,11 @@ rawData = [
         "nw1605": "-",
         "nw1705": "(16, 30)",
         "nw1905": "(10, 29)",
-        "nw2305": "(27, 7)"
+        "nw2305": "(27, 7)",
+        "nw2405": "(6, 7)"
     },
     {
-        "name": "ItsMeStarmet",
+        "familyname": "ItsMeStarmet",
         "party": "Main",
         "gs": 630,
         "class": "Kuno",
@@ -429,10 +452,11 @@ rawData = [
         "nw1605": "-",
         "nw1705": "-",
         "nw1905": "-",
-        "nw2305": "-"
+        "nw2305": "-",
+        "nw2405": "-"
     },
     {
-        "name": "Hyrroken",
+        "familyname": "Hyrroken",
         "party": "Main",
         "gs": 581,
         "class": "Mystic",
@@ -447,10 +471,11 @@ rawData = [
         "nw1605": "-",
         "nw1705": "(13, 31)",
         "nw1905": "(9, 31)",
-        "nw2305": "(4, 13)"
+        "nw2305": "(4, 13)",
+        "nw2405": "-"
     },
     {
-        "name": "Zamyron",
+        "familyname": "Zamyron",
         "party": "Main",
         "gs": 566,
         "class": "Ninja",
@@ -465,10 +490,11 @@ rawData = [
         "nw1605": "(5, 14)",
         "nw1705": "-",
         "nw1905": "(2, 1)",
-        "nw2305": "-"
+        "nw2305": "-",
+        "nw2405": "-"
     },
     {
-        "name": "AbsintheFairy",
+        "familyname": "AbsintheFairy",
         "party": "Main",
         "gs": 601,
         "class": "Ranger",
@@ -483,10 +509,11 @@ rawData = [
         "nw1605": "(3, 39)",
         "nw1705": "(1, 32)",
         "nw1905": "-",
-        "nw2305": "(0, 15)"
+        "nw2305": "(0, 15)",
+        "nw2405": "(3, 9)"
     },
     {
-        "name": "BoryaSenshi",
+        "familyname": "BoryaSenshi",
         "party": "Main",
         "gs": 622,
         "class": "Warrior",
@@ -501,10 +528,11 @@ rawData = [
         "nw1605": "(10, 31)",
         "nw1705": "(6, 25)",
         "nw1905": "-",
-        "nw2305": "-"
+        "nw2305": "-",
+        "nw2405": "-"
     },
     {
-        "name": "Dreameryyy",
+        "familyname": "Dreameryyy",
         "party": "Main",
         "gs": 564,
         "class": "Witch",
@@ -519,10 +547,11 @@ rawData = [
         "nw1605": "-",
         "nw1705": "-",
         "nw1905": "-",
-        "nw2305": "-"
+        "nw2305": "-",
+        "nw2405": "-"
     },
     {
-        "name": "Alibabajabar",
+        "familyname": "Alibabajabar",
         "party": "Main",
         "gs": 600,
         "class": "Ninja",
@@ -537,10 +566,11 @@ rawData = [
         "nw1605": "-",
         "nw1705": "-",
         "nw1905": "-",
-        "nw2305": "-"
+        "nw2305": "-",
+        "nw2405": "-"
     },
     {
-        "name": "Bayezit",
+        "familyname": "Bayezit",
         "party": "Main",
         "gs": 585,
         "class": "Sage",
@@ -555,10 +585,11 @@ rawData = [
         "nw1605": "-",
         "nw1705": "-",
         "nw1905": "-",
-        "nw2305": "-"
+        "nw2305": "-",
+        "nw2405": "-"
     },
     {
-        "name": "Soullix",
+        "familyname": "Soullix",
         "party": "Main",
         "gs": 607,
         "class": "Ninja",
@@ -573,10 +604,11 @@ rawData = [
         "nw1605": "-",
         "nw1705": "-",
         "nw1905": "-",
-        "nw2305": "-"
+        "nw2305": "-",
+        "nw2405": "-"
     },
     {
-        "name": "FAKEx",
+        "familyname": "FAKEx",
         "party": "Main",
         "gs": "-",
         "class": "-",
@@ -591,10 +623,11 @@ rawData = [
         "nw1605": "-",
         "nw1705": "-",
         "nw1905": "-",
-        "nw2305": "-"
+        "nw2305": "-",
+        "nw2405": "-"
     },
     {
-        "name": "Ecchi_Lover",
+        "familyname": "Ecchi_Lover",
         "party": "Main",
         "gs": 632,
         "class": "DK",
@@ -609,10 +642,11 @@ rawData = [
         "nw1605": "-",
         "nw1705": "-",
         "nw1905": "-",
-        "nw2305": "-"
+        "nw2305": "-",
+        "nw2405": "-"
     },
     {
-        "name": "Moszi",
+        "familyname": "Moszi",
         "party": "Main",
         "gs": 586,
         "class": "Warrior",
@@ -627,10 +661,11 @@ rawData = [
         "nw1605": "-",
         "nw1705": "-",
         "nw1905": "-",
-        "nw2305": "-"
+        "nw2305": "-",
+        "nw2405": "-"
     },
     {
-        "name": "Elucidator",
+        "familyname": "Elucidator",
         "party": "Main",
         "gs": 650,
         "class": "Warrior",
@@ -645,10 +680,11 @@ rawData = [
         "nw1605": "(34, 25)",
         "nw1705": "-",
         "nw1905": "(32, 23)",
-        "nw2305": "(21, 6)"
+        "nw2305": "(21, 6)",
+        "nw2405": "(8, 3)"
     },
     {
-        "name": "Rootkit",
+        "familyname": "Rootkit",
         "party": "Main",
         "gs": "-",
         "class": "-",
@@ -663,10 +699,11 @@ rawData = [
         "nw1605": "-",
         "nw1705": "-",
         "nw1905": "-",
-        "nw2305": "-"
+        "nw2305": "-",
+        "nw2405": "-"
     },
     {
-        "name": "Tecnik",
+        "familyname": "Tecnik",
         "party": "Main",
         "gs": "-",
         "class": "-",
@@ -681,10 +718,11 @@ rawData = [
         "nw1605": "-",
         "nw1705": "-",
         "nw1905": "-",
-        "nw2305": "-"
+        "nw2305": "-",
+        "nw2405": "-"
     },
     {
-        "name": "Seidu",
+        "familyname": "Seidu",
         "party": "Main",
         "gs": 624,
         "class": "Warrior",
@@ -699,10 +737,11 @@ rawData = [
         "nw1605": "(51, 32)",
         "nw1705": "(17, 24)",
         "nw1905": "(28, 21)",
-        "nw2305": "-"
+        "nw2305": "-",
+        "nw2405": "(13, 7)"
     },
     {
-        "name": "Rodge",
+        "familyname": "Rodge",
         "party": "Main",
         "gs": 566,
         "class": "Nova",
@@ -717,10 +756,11 @@ rawData = [
         "nw1605": "(8, 32)",
         "nw1705": "-",
         "nw1905": "(8, 21)",
-        "nw2305": "-"
+        "nw2305": "-",
+        "nw2405": "-"
     },
     {
-        "name": "BloodSenin",
+        "familyname": "BloodSenin",
         "party": "Main",
         "gs": 589,
         "class": "Ninja",
@@ -735,10 +775,11 @@ rawData = [
         "nw1605": "-",
         "nw1705": "(19, 31)",
         "nw1905": "-",
-        "nw2305": "-"
+        "nw2305": "-",
+        "nw2405": "(12, 5)"
     },
     {
-        "name": "JulisRiessfeld",
+        "familyname": "JulisRiessfeld",
         "party": "Main",
         "gs": 579,
         "class": "-",
@@ -753,10 +794,11 @@ rawData = [
         "nw1605": "-",
         "nw1705": "(13, 25)",
         "nw1905": "-",
-        "nw2305": "(10, 7)"
+        "nw2305": "(10, 7)",
+        "nw2405": "(3, 7)"
     },
     {
-        "name": "Qmer",
+        "familyname": "Qmer",
         "party": "Main",
         "gs": "-",
         "class": "-",
@@ -771,10 +813,11 @@ rawData = [
         "nw1605": "-",
         "nw1705": "-",
         "nw1905": "-",
-        "nw2305": "-"
+        "nw2305": "-",
+        "nw2405": "-"
     },
     {
-        "name": "GAiNZvsGAMEs",
+        "familyname": "GAiNZvsGAMEs",
         "party": "Main",
         "gs": "-",
         "class": "-",
@@ -789,10 +832,11 @@ rawData = [
         "nw1605": "-",
         "nw1705": "-",
         "nw1905": "-",
-        "nw2305": "-"
+        "nw2305": "-",
+        "nw2405": "-"
     },
     {
-        "name": "Slutcakes",
+        "familyname": "Slutcakes",
         "party": "Def",
         "gs": 555,
         "class": "DK",
@@ -807,10 +851,11 @@ rawData = [
         "nw1605": "-",
         "nw1705": "(4, 8)",
         "nw1905": "-",
-        "nw2305": "(0, 1)"
+        "nw2305": "(0, 1)",
+        "nw2405": "-"
     },
     {
-        "name": "Incelis",
+        "familyname": "Incelis",
         "party": "Main",
         "gs": 623,
         "class": "Striker",
@@ -825,10 +870,11 @@ rawData = [
         "nw1605": "-",
         "nw1705": "-",
         "nw1905": "-",
-        "nw2305": "-"
+        "nw2305": "-",
+        "nw2405": "-"
     },
     {
-        "name": "OxybulEveilEtJeu",
+        "familyname": "OxybulEveilEtJeu",
         "party": "Main",
         "gs": "-",
         "class": "-",
@@ -843,10 +889,11 @@ rawData = [
         "nw1605": "-",
         "nw1705": "-",
         "nw1905": "-",
-        "nw2305": "-"
+        "nw2305": "-",
+        "nw2405": "-"
     },
     {
-        "name": "Kaisel",
+        "familyname": "Kaisel",
         "party": "Main",
         "gs": "-",
         "class": "-",
@@ -861,10 +908,11 @@ rawData = [
         "nw1605": "-",
         "nw1705": "-",
         "nw1905": "-",
-        "nw2305": "-"
+        "nw2305": "-",
+        "nw2405": "-"
     },
     {
-        "name": "Charohazard",
+        "familyname": "Charohazard",
         "party": "Main",
         "gs": "-",
         "class": "-",
@@ -879,10 +927,11 @@ rawData = [
         "nw1605": "-",
         "nw1705": "-",
         "nw1905": "-",
-        "nw2305": "-"
+        "nw2305": "-",
+        "nw2405": "-"
     },
     {
-        "name": "Overwerk",
+        "familyname": "Overwerk",
         "party": "Main",
         "gs": "-",
         "class": "-",
@@ -897,10 +946,11 @@ rawData = [
         "nw1605": "-",
         "nw1705": "-",
         "nw1905": "-",
-        "nw2305": "-"
+        "nw2305": "-",
+        "nw2405": "-"
     },
     {
-        "name": "Caalamity",
+        "familyname": "Caalamity",
         "party": "Main",
         "gs": "-",
         "class": "-",
@@ -915,10 +965,11 @@ rawData = [
         "nw1605": "-",
         "nw1705": "-",
         "nw1905": "-",
-        "nw2305": "-"
+        "nw2305": "-",
+        "nw2405": "-"
     },
     {
-        "name": "Seduzer",
+        "familyname": "Seduzer",
         "party": "Main",
         "gs": "-",
         "class": "-",
@@ -933,10 +984,11 @@ rawData = [
         "nw1605": "-",
         "nw1705": "-",
         "nw1905": "-",
-        "nw2305": "-"
+        "nw2305": "-",
+        "nw2405": "-"
     },
     {
-        "name": "Nobuno",
+        "familyname": "Nobuno",
         "party": "Main",
         "gs": "-",
         "class": "-",
@@ -951,10 +1003,11 @@ rawData = [
         "nw1605": "-",
         "nw1705": "-",
         "nw1905": "-",
-        "nw2305": "-"
+        "nw2305": "-",
+        "nw2405": "-"
     },
     {
-        "name": "Gencode",
+        "familyname": "Gencode",
         "party": "Main",
         "gs": "-",
         "class": "-",
@@ -969,10 +1022,11 @@ rawData = [
         "nw1605": "-",
         "nw1705": "-",
         "nw1905": "-",
-        "nw2305": "-"
+        "nw2305": "-",
+        "nw2405": "-"
     },
     {
-        "name": "TrebUwUchet",
+        "familyname": "TrebUwUchet",
         "party": "Main",
         "gs": "-",
         "class": "-",
@@ -987,10 +1041,11 @@ rawData = [
         "nw1605": "-",
         "nw1705": "-",
         "nw1905": "-",
-        "nw2305": "-"
+        "nw2305": "-",
+        "nw2405": "-"
     },
     {
-        "name": "IIOctavius",
+        "familyname": "IIOctavius",
         "party": "Main",
         "gs": 600,
         "class": "Warrior",
@@ -1005,10 +1060,11 @@ rawData = [
         "nw1605": "-",
         "nw1705": "-",
         "nw1905": "-",
-        "nw2305": "(25, 4)"
+        "nw2305": "(25, 4)",
+        "nw2405": "(15, 3)"
     },
     {
-        "name": "NanusDickus",
+        "familyname": "NanusDickus",
         "party": "Def",
         "gs": "-",
         "class": "-",
@@ -1023,10 +1079,11 @@ rawData = [
         "nw1605": "-",
         "nw1705": "-",
         "nw1905": "-",
-        "nw2305": "-"
+        "nw2305": "-",
+        "nw2405": "-"
     },
     {
-        "name": "Aldrya",
+        "familyname": "Aldrya",
         "party": "Main",
         "gs": "-",
         "class": "-",
@@ -1041,10 +1098,11 @@ rawData = [
         "nw1605": "-",
         "nw1705": "-",
         "nw1905": "-",
-        "nw2305": "-"
+        "nw2305": "-",
+        "nw2405": "-"
     },
     {
-        "name": "Reasinglow",
+        "familyname": "Reasinglow",
         "party": "Main",
         "gs": "-",
         "class": "-",
@@ -1059,6 +1117,7 @@ rawData = [
         "nw1605": "-",
         "nw1705": "-",
         "nw1905": "-",
-        "nw2305": "-"
+        "nw2305": "-",
+        "nw2405": "-"
     }
 ]
