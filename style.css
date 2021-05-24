@@ -1,0 +1,16 @@
+* {
+    font-family: Arial;
+   }
+   .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 7%;
+  }
+
+  #kdChart{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%; 
+  }
