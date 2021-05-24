@@ -23,7 +23,23 @@ class member {
 
 }
 
+class nodewar{
+    constructor(date,members){
+        this.date = date;
+        this.members = members;
+        this.kills = 0;
+        this.deaths = 0;
+        this.kd = 0;
+        members.forEach(m => {
+            this.nwIndex = nodewarNames.indexOf(date);
+            this.kills += m.stats[this.nwIndex][0];
+            this.deaths += m.stats[this.nwIndex][1];
+        });
+        this.kd = parseFloat(this.kills / this.deaths).toFixed(2);
+    }
+}
 
+nodewars = []
 members = [];
 kdChart = null;
 amountOfNodewars = Object.keys(rawData[0]).length - 4;
@@ -53,6 +69,21 @@ for (let i = 0; i < rawData.length; i++) {
     if (m.kd > 0)
         members.push(m)
 }
+
+
+for (let i = 0; i < nodewarNames.length; i++) {
+    membersInNw = [];
+    members.forEach(m => {
+        if(m.stats[i] != null){
+            membersInNw.push(m);
+        }
+    });
+
+    nw = new nodewar(nodewarNames[i],membersInNw);
+    nodewars.push(nw);
+}
+
+
 members.sort((a, b) => b.kd - a.kd)
 members.forEach(m => {
     m.place = members.indexOf(m) + 1
@@ -152,7 +183,6 @@ function displayMember(name) {
             d[day+"."+month] = `${m.stats[i][0]} | ${m.stats[i][1]} (${kd})`;
         }
     }
-    console.log(Object.keys(d))
     table.updateConfig({
         columns: Object.keys(d),
         height: 150,
@@ -161,14 +191,23 @@ function displayMember(name) {
 
     }).forceRender();
 
-
+    avgKDs = [];
+    nodewars.forEach(nw => {
+        avgKDs.push(nw.kd);
+    });
+    console.log(avgKDs);
     const data = {
         labels: Object.keys(d),
         datasets: [{
-          label: 'KD',
+          label: m.name,
           backgroundColor: 'rgb(255, 99, 132)',
           borderColor: 'rgb(255, 99, 132)',
-          data: allKDs,
+          data: allKDs
+        },{
+        label: "Avg",
+        backgroundColor: 'rgb(123, 99, 255)',
+        borderColor: 'rgb(123, 99, 255)',
+        data: avgKDs
         }]
       };
     
