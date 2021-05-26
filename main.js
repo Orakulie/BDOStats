@@ -84,6 +84,8 @@ for (let i = 0; i < rawData.length; i++) {
             kills = parseInt(value[0]);
             deaths = parseInt(value[1].slice(0, -1));
             stats.push([kills, deaths])
+        }else{
+            stats.push((null,null))
         }
 
     }
