@@ -228,6 +228,8 @@ function changeMembers(nws) {
                 kills = parseInt(value[0]);
                 deaths = parseInt(value[1].slice(0, -1));
                 stats.push([kills, deaths])
+            }else{
+                stats.push((null,null))
             }
 
         }
@@ -288,15 +290,20 @@ function displayAll() {
 
 function displayMember(name) {
     toggleCheckboxesVisiblity(false);
-    m = members.find(e => e.name == name);
+    var m = members.find(e => e.name == name);
     document.getElementById("tableTitle").innerHTML = `${name}<br>${m.kills}-${m.deaths}<br>${m.kd}`;
-    d = {};
-    allKDs = []
-    offset = 0;
-    for (let i = 0; i < nodewarNames.length; i++) {
+    var d = {};
+    var allKDs = []
+    var nws = [];
 
-        while(i+offset < checkboxes.length &&!checkboxes[i+offset].checked)
-            offset+=1;
+    for (let i = 0; i < nodewarNames.length; i++) {
+        if(checkboxes[i].checked){
+            nws.push(nodewarNames[i]);
+        }        
+    }
+
+    for (let i = 0; i < nws.length; i++) {
+
         if (m.stats[i] != null) {
             if (m.stats[i][1] > 0) {
                 kd = parseFloat(m.stats[i][0] / m.stats[i][1]).toFixed(2);
@@ -304,7 +311,7 @@ function displayMember(name) {
                 kd = m.stats[i][0];
             }
             allKDs.push(kd);
-            date = nodewarNames[i+offset].split("w")[1];
+            date = nws[i].split("w")[1];
             day = date.slice(0, 2);
             month = date.slice(2, 4);
             d[day + "." + month] = `${m.stats[i][0]} | ${m.stats[i][1]} (${kd})`;
