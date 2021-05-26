@@ -316,7 +316,11 @@ function displayMember(name) {
 
     avgKDs = [];
     nodewars.forEach(nw => {
-        avgKDs.push(nw.kd);
+        joinedNws = Object.keys(d)
+        date = nw.date
+        if(joinedNws.includes(date)){
+            avgKDs.push(nw.kd);
+        }
     });
     const data = {
         labels: Object.keys(d),
