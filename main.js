@@ -292,7 +292,11 @@ function displayMember(name) {
     document.getElementById("tableTitle").innerHTML = `${name}<br>${m.kills}-${m.deaths}<br>${m.kd}`;
     d = {};
     allKDs = []
+    offset = 0;
     for (let i = 0; i < nodewarNames.length; i++) {
+
+        while(i+offset < checkboxes.length &&!checkboxes[i+offset].checked)
+            offset+=1;
         if (m.stats[i] != null) {
             if (m.stats[i][1] > 0) {
                 kd = parseFloat(m.stats[i][0] / m.stats[i][1]).toFixed(2);
@@ -300,7 +304,7 @@ function displayMember(name) {
                 kd = m.stats[i][0];
             }
             allKDs.push(kd);
-            date = nodewarNames[i].split("w")[1];
+            date = nodewarNames[i+offset].split("w")[1];
             day = date.slice(0, 2);
             month = date.slice(2, 4);
             d[day + "." + month] = `${m.stats[i][0]} | ${m.stats[i][1]} (${kd})`;
