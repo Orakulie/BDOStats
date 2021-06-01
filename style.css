@@ -8,6 +8,21 @@
     width: 7%;
   }
 
+  #classes {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+  }
+  #infoStats{
+  display: inline-block;
+  vertical-align:top;
+  }
+
+  #info{
+    text-align: center;
+  }
+
   #kdChart{
     display: block;
     margin-left: auto;
