@@ -557,3 +557,11 @@ function getClassColor(cl) {
     }
     return color;
 }
+
+
+
+
+
+function calcPerformanc(k,d,avgk, avgd){
+    return k-avgk + avgd-d;
+}
