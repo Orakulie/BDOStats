@@ -1,57 +1,190 @@
 * {
     font-family: Arial;
+    font-size: 20px;
    }
    .center {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 7%;
+    width: 8%;
   }
 
-  #classes {
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 15%;
-  }
-  #infoStats{
-  display: inline-block;
-  vertical-align:top;
-  }
-
-  #info{
-    text-align: center;
-  }
-
-  #kdChart{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 40%; 
-  }
-  .timeButton {
-    display: inline-block;
-    width: 50px;
-  }
-  #checkboxes{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  [type="checkbox"] {
-    margin-left: 10px;
-    margin-right: 10px;
-  
-  }
-#toggleCheckboxesButton{
-  display: block;
-  margin-left: auto;
-    margin-right: auto;
-    padding: 5px;text-align: center;
+body{
+  background-color: #222831;
 }
 
-  #table{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.title {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 30px;
+  color: #ECECEC;
+  text-align: center;
+}
+
+
+.centerNws{
+  margin: auto;
+  width: 50%;
+}
+
+#allNws{
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  display: flex;
+  width: 80%;
+  flex-wrap: wrap;
+}
+
+.nwBlock{
+  
+  padding: 10px;
+  width:120px;
+  display: flex;
+  flex-flow:column;
+  border-radius: 7px;
+  background-color: #f2a365;
+  margin: 5px;
+  transition: all .1s ease-in-out;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+
+}
+.nwBlock:hover{
+  display: flex;
+  transform: scale(1.048)  translateZ(0);
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+.lineBreak{
+  width: 100%;
+}
+
+.nwBlockTitle{
+  display: flex;
+  font-size: 30px;
+  width: 100%;
+  height:fit-content;
+}
+
+.nwBlockStats{
+  display: flex;
+  width: 100%;
+  flex-flow:column;
+}
+
+
+
+
+#checkboxes{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:#ECECEC;
+}
+[type="checkbox"] {
+
+  margin-left: 10px;
+  margin-right: 10px;
+
+}
+#toggleCheckboxesButton{
+display: block;
+margin-left: auto;
+margin-right: auto;
+padding: 5px;text-align: center;
+background-color: #f2a365; 
+border: none;
+color: #111;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+}
+#toggleCheckboxesButton:hover {
+  background-color: #FFD282; 
+  color: #111;
+}
+
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+#kdChartWrapper{
+  margin: auto;
+  width: 70%;
+}
+
+#tableTitle{
+  color:white;
+}
+
+
+
+/* The sidebar menu */
+.sidenav {
+  height: 100%; 
+  width: 160px; 
+  position: fixed; 
+  z-index: 1; 
+  top: 0; 
+  left: 0;
+  background-color: #111; 
+  overflow-x: hidden; 
+  padding-top: 20px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Style page content */
+.main {
+  margin-left: 160px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+https://colorhunt.co/palette/179373
+#222831
+#30475e
+#F2A365
+#ECECEC
+*/

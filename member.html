@@ -12,23 +12,16 @@
 
     <div class="sidenav">
         <input type="image" onclick="window.open('index.html','_top')" src="https://cdn.discordapp.com/icons/685206168179966015/d2279098f190260fac681a75a4492921.webp?size=128"
-            alt="logo">
-
+        alt="logo">
+        
     </div>
 
     <!-- Page content -->
     <div class="main">
-
-        <h1 class="title">All Nodewars:</h1>
-        <div id="allNws">
-        </div>
-        <br>
-        <div id="checkboxes"></div>
-        <br>
-
-        <button type="button" onclick="toggleCheckboxes()" id="toggleCheckboxesButton">Uncheck All</button>
-        <br>
+        <div id="tableTitle" class="title"></div>
         <div id="wrapper"></div>
+        <div id="kdChartWrapper">
+        <canvas id='kdChart' ></canvas></div>
     </div>
 
 
@@ -39,7 +32,7 @@
     <script src="https://unpkg.com/gridjs/dist/gridjs.production.min.js"></script>
     <script type="text/javascript" src="data/Stats.js"></script>
     <script type="text/javascript" src="data/data.js"></script>
-    <script src="scripts/main.js"></script>
+    <script type="text/javascript" src="scripts/showMember.js"></script>
 </body>
 
 </html>
