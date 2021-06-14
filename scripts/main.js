@@ -12,10 +12,11 @@ for (let i = 0; i < nodewars.length; i++) {
 
     var nwBlock = document.createElement("div");
     nwBlock.setAttribute("class","nwBlock");
-
+    nwBlock.onclick = ()=>window.open("nodewar.html?ID="+nodewars[i].id,"_self");
+    
     if(nodewars[i].result==1){
         nwBlock.style.backgroundColor="#61b15a";
-    }else if(nodewars[i].result==0){
+    }else if(nodewars[i].result==-1){
         nwBlock.style.backgroundColor="#aa3a3a";
     }
 
@@ -50,7 +51,7 @@ table = new gridjs.Grid({
                     'data-cell-content': cell,
                     'id': cell,
                     'onclick': () => {
-                        window.open("member.html?name="+cell,"_top");
+                        window.open("member.html?name="+cell,"_self");
                     },
                     'style': 'cursor: pointer;background-color: rgb(17, 17, 17);    border: 1px solid #222831;',
                     'onMouseOver': () => document.getElementById(cell).style.backgroundColor = "#222831",
@@ -67,21 +68,22 @@ table = new gridjs.Grid({
         "Kills", "Deaths", "KD"],
     data: members,
     sort: true,
-    fixedHeader: true,
     style:{
-        
-        td:{
+
+    
+    td:{
         "backgroundColor":"#111",
-        "borderColor":"#222831"
+        "borderColor":"#222831",
+        
     },
     container :{
         "color":"#ececec",
-        "borderColor":"#222831"
+        "borderColor":"#222831",
     },
     table:{
         "backgroundColor":"#111",
         "color":"#ececec",
-        "borderColor":"#222831"
+        "borderColor":"#222831",
     },
     th:{
         "backgroundColor":"#f2a365",
@@ -95,7 +97,6 @@ table = new gridjs.Grid({
 
     }
 }).render(document.getElementById("wrapper"));
-
 
 
 
@@ -271,3 +272,208 @@ function displayAll() {
         }
     }).forceRender();
 }
+
+
+
+
+
+function getClassData() {
+    var memberClasses = {};
+
+
+    members.forEach(m => {
+        if (m.cl != "-" && m.kd != 0) {
+            if (memberClasses[m.cl] == null) {
+                memberClasses[m.cl] = 1;
+            } else {
+                memberClasses[m.cl] += 1;
+            }
+        }
+    });
+
+    //var otherClasses = "";
+    //var otherClassesAmount = 0;
+
+    //for (var k in memberClasses) {
+    //    if (memberClasses[k] <= 2) {
+
+    //        otherClasses += k + " ";
+    //        otherClassesAmount += memberClasses[k];
+    //        delete memberClasses[k];
+    //    }
+    //}
+    //memberClasses[otherClasses] = otherClassesAmount;
+
+    var classAmount = []
+    var colors = []
+    for (var k in memberClasses) {
+        //    colors.push(getClassColor(k));
+        classAmount.push(memberClasses[k])
+    }
+    colors = ["rgb(11,11,11)", "rgb(242,163,101)", "rgb(48,71,94)", "rgb(101,64,98)"]
+    const memberClassesData = {
+        labels: Object.keys(memberClasses),
+        datasets: [{
+            data: classAmount, backgroundColor: colors
+        }],
+
+    }
+    return memberClassesData;
+}
+
+const classDisplayConfig = {
+    type: 'doughnut',
+    data: getClassData(),
+    options: {
+        borderColor: "rgba(10,10,10,0.3)",
+        responsive: false,
+        plugins: {
+            legend: {
+                display: false,
+                position: 'top',
+            },
+            title: {
+                display: true,
+                text: 'Class distribution',
+                color:"#ECECEC"
+            }
+        }
+    },
+};
+
+
+classChart = new Chart(
+    document.getElementById('classes'),
+    classDisplayConfig
+);
+
+
+function getClassColor(cl) {
+    color = "";
+    switch (cl) {
+        case ("Nova"):
+            color = "rgb(0, 128, 128)";
+            break;
+        case ("Guardian"):
+            color = "rgb(170,110,40)";
+            break;
+        case ("Warrior"):
+            color = "rgb(245, 130, 48)";
+            break;
+        case ("Ninja"):
+            color = "rgb(0,0,0)";
+            break;
+        case ("Hash"):
+            color = "rgb(255,225, 25)";
+            break;
+        case ("DK"):
+            color = "rgb(20,50,150)";
+            break;
+        case ("Witch"):
+            color = "rgb(70,240,240)";
+            break;
+        case ("Striker"):
+            color = "rgb(255,250,200)";
+            break;
+        case ("Zerk"):
+            color = "rgb(128, 160,30)";
+            break;
+        case ("Archer"):
+            color = "rgb(170, 255, 195)";
+            break;
+        case ("Sorc"):
+            color = "rgb(145, 30, 180)";
+            break;
+        case ("Wizard"):
+            color = "rgb(255,215,180)";
+            break;
+        case ("Valk"):
+            color = "rgb(255,255,255)";
+            break;
+        case ("Ranger"):
+            color = "rgb(60, 180, 75)";
+            break;
+        case ("Sage"):
+            color = "rgb(255,250,200)";
+            break;
+        case ("Mystic"):
+            color = "rgb(0,130,200)";
+            break;
+        case ("Tamer"):
+            color = "rgb(250, 190, 212)";
+            break;
+        case ("Lahn"):
+            color = "rgb(230,25,75)";
+            break;
+        default:
+            color = "rgb(128,128,128)";
+            break;
+    }
+    return color;
+}
+
+parties = [{ "Name": "Main", "Members": 0, "KD": 0 }, { "Name": "Flex", "Members": 0, "KD": 0 }, { "Name": "Def", "Members": 0, "KD": 0 }]
+
+for (let i = 0; i < members.length; i++) {
+    const element = members[i];
+    if (element.party == "Main") {
+        parties[0].KD += parseFloat(element.kd);
+        parties[0].Members++;
+    } else if (element.party == "Flex") {
+        parties[1].KD += parseFloat(element.kd);
+        parties[1].Members++;
+    } else {
+        parties[2].KD += parseFloat(element.kd);
+        parties[2].Members++;
+    }
+}
+for (let i = 0; i < 3; i++) {
+    parties[i].KD = parties[i].KD / parties[i].Members;
+}
+
+
+partiesKD = [parties[0].KD, parties[1].KD, parties[2].KD]
+colors = [ "rgba(242,163,101,0.6)", "rgba(48,71,94,0.6)", "rgb(101,64,98,0.6)"]
+
+const partyData = {
+    labels: ["Main", "Flex", "Def"],
+    datasets: [{
+        data: partiesKD, backgroundColor: colors
+    }],
+
+}
+
+const groupConfig = {
+    type: 'polarArea',
+    data: partyData,
+    options: {
+        borderColor: "rgba(10,10,10,0.3)",
+        scales: {
+            r: {
+              ticks: {
+                color:"white",
+                backdropColor:"rgba(0,0,0,0)"
+              }
+            }
+          },
+        responsive: false,
+        plugins: {
+            legend: {
+                display: false,
+                position: 'top',
+            },
+            title: {
+                display: true,
+                text: 'Party Performances (KD)',
+                color:"#ECECEC"
+            }
+        }
+    }
+};
+
+
+
+groupChart = new Chart(
+    document.getElementById('groups'),
+    groupConfig
+);

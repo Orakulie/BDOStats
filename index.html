@@ -11,24 +11,31 @@
     <!-- Side navigation -->
 
     <div class="sidenav">
-        <input type="image" onclick="window.open('index.html','_top')" src="https://cdn.discordapp.com/icons/685206168179966015/d2279098f190260fac681a75a4492921.webp?size=128"
+        <input type="image" onclick="window.open('index.html','_self')" src="https://cdn.discordapp.com/icons/685206168179966015/d2279098f190260fac681a75a4492921.webp?size=128"
             alt="logo">
 
     </div>
 
     <!-- Page content -->
     <div class="main">
-
-        <h1 class="title">All Nodewars:</h1>
+        <div id="graphs">
+            <canvas id="classes"></canvas>
+            <canvas id="groups"></canvas>
+        </div>
+        <h1 class="title">Nodewars</h1>
         <div id="allNws">
         </div>
         <br>
+        
+        <br>
+        <h1 class="title">Members</h1>
         <div id="checkboxes"></div>
         <br>
 
         <button type="button" onclick="toggleCheckboxes()" id="toggleCheckboxesButton">Uncheck All</button>
         <br>
-        <div id="wrapper"></div>
+        <div id="wrapperUp">
+        <div id="wrapper"></div></div>
     </div>
 
 

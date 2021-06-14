@@ -34,7 +34,7 @@ class nodewar {
         this.month = this.date.slice(2, 4);
         this.date = this.day + "." + this.month;
 
-        this.result = -1;
+        this.result = 0;
 
 
         this.members = members;
@@ -135,4 +135,7 @@ avgKD = avgK / avgD;
 
 
 
+function getNodewar(id){ 
+    return nodewars.find(nw => {if(nw.id==id)return nw})
+}
 

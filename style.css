@@ -46,6 +46,7 @@ body{
   border-radius: 7px;
   background-color: #f2a365;
   margin: 5px;
+  cursor: pointer;
   transition: all .1s ease-in-out;
   backface-visibility: hidden;
   -webkit-font-smoothing: antialiased;
@@ -78,7 +79,10 @@ body{
 
 
 #checkboxes{
+  width: 80%;
+  margin: auto;
   display: flex;
+  flex-flow: wrap;
   justify-content: center;
   align-items: center;
   color:#ECECEC;
@@ -125,6 +129,12 @@ text-decoration: none;
   background: #555;
 }
 
+#wrapperUp{
+  width:100%;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
 
 #kdChartWrapper{
   margin: auto;
@@ -174,13 +184,21 @@ text-decoration: none;
 
 
 
+#graphs{
+  display: flex;
+  justify-content: center;
+}
+
+
+.container hr {
+  width: 100%;
+}
 
 
 
-
-
-
-
+.gridjs-container {
+  width: auto;
+}
 /*
 https://colorhunt.co/palette/179373
 #222831

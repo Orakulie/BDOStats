@@ -3,8 +3,9 @@
 
 <head>
     <title>Rival - Stats</title>
-    <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
+   
     <link href="style.css" rel="stylesheet" />
+    <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -19,20 +20,23 @@
     <!-- Page content -->
     <div class="main">
         <div id="tableTitle" class="title"></div>
+        <div id="graphs">
+        <canvas id="classes"></canvas>
+        <canvas id="groups"></canvas>
+    </div>
         <div id="wrapper"></div>
-        <div id="kdChartWrapper">
-        <canvas id='kdChart' ></canvas></div>
+        <!--<div id="kdChartWrapper">
+        <canvas id='kdChart' ></canvas></div>-->
+        
     </div>
 
 
 
-
-
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.1/chart.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js"></script>
     <script src="https://unpkg.com/gridjs/dist/gridjs.production.min.js"></script>
     <script type="text/javascript" src="data/Stats.js"></script>
     <script type="text/javascript" src="data/data.js"></script>
-    <script type="text/javascript" src="scripts/showMember.js"></script>
+    <script type="text/javascript" src="scripts/showNodewar.js"></script>
 </body>
 
 </html>
