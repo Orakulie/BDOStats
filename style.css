@@ -197,7 +197,7 @@ text-decoration: none;
 
 
 .gridjs-container {
-  width: auto;
+  width: auto !important;
 }
 /*
 https://colorhunt.co/palette/179373
