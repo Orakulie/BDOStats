@@ -1,11 +1,55 @@
 nwResults = [
     {
-        "id":"nw2305",
+        "id":"nw2504",
+        "result":-1
+    },
+    {
+        "id":"nw2604",
+        "result":-1
+    },
+    {
+        "id":"nw2804",
+        "result":1
+    },
+    {
+        "id":"nw0305",
+        "result":1
+    },
+    {
+        "id":"nw0505",
+        "result":-1
+    },
+    {
+        "id":"nw0905",
+        "result":1
+    },
+    {
+        "id":"nw1005",
+        "result":1
+    },
+    {
+        "id":"nw1205",
         "result":0
     },
     {
-        "id":"nw2405",
+        "id":"nw1605",
+        "result":1
+    },
+    {
+        "id":"nw1705",
+        "result":-1
+    },
+    {
+        "id":"nw1905",
         "result":0
+    },
+    {
+        "id":"nw2305",
+        "result":1
+    },
+    {
+        "id":"nw2405",
+        "result":1
     },
     {
         "id":"nw2605",
