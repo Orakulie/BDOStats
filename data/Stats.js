@@ -158,7 +158,7 @@ rawData = [
     },
     {
         "familyname": "Elynaeris",
-        "party": "Flex",
+        "party": "Main",
         "gs": 665,
         "class": "Guardian",
         "nw2504": "(10, 11)",
@@ -212,7 +212,7 @@ rawData = [
     },
     {
         "familyname": "Mint",
-        "party": "Main",
+        "party": "Flex",
         "gs": 592,
         "class": "Archer",
         "nw2504": "-",
@@ -401,7 +401,7 @@ rawData = [
     },
     {
         "familyname": "Plutonyum",
-        "party": "Flex",
+        "party": "Def",
         "gs": 628,
         "class": "Hash",
         "nw2504": "-",
@@ -563,7 +563,7 @@ rawData = [
     },
     {
         "familyname": "FantomSVK",
-        "party": "Main",
+        "party": "Def",
         "gs": 583,
         "class": "Warrior",
         "nw2504": "(0, 14)",
@@ -1130,7 +1130,7 @@ rawData = [
     },
     {
         "familyname": "Unreliable",
-        "party": "Main",
+        "party": "Flex",
         "gs": 640,
         "class": "Witch",
         "nw2504": "-",
@@ -1319,7 +1319,7 @@ rawData = [
     },
     {
         "familyname": "LilBenii",
-        "party": "Main",
+        "party": "Flex",
         "gs": 589,
         "class": "Maehwa",
         "nw2504": "-",
