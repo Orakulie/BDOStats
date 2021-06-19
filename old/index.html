@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><title>Rival - Stats</title>
+        <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
+        <link href="style.css" rel="stylesheet"/>
+    </head>
+<body>
+    <img src="https://cdn.discordapp.com/icons/685206168179966015/d2279098f190260fac681a75a4492921.webp?size=128" alt="logo" class="center">
+    <h1 style="text-align:center;">Rival</h1>
+
+    <h2 style="text-align:center;" id="tableTitle">All Stats</h2>
+
+    <div id="checkboxes"></div>
+    <br>
+    
+    <button type="button" onclick="toggleCheckboxes()"  id="toggleCheckboxesButton">Uncheck All</button>
+    <br>
+    <div id="info">
+        
+    </canvas><div id="infoStats"><br>Stats:<br><br>Total Kills:0<br>Total Deaths:0<br>Avg Kills:0<br>Avg Deaths:0 <br> Avg KD:0</div>
+</div>
+<div id="table">
+    
+    <div id="wrapper"></div>
+</div>
+    <button type="button" onclick="displayAll()" class="center">Back</button>
+    <div>
+        <canvas id='kdChart' ></canvas>
+      </div>
+      <canvas id='classes' >
+
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.1/chart.min.js"></script>
+    <script src="https://unpkg.com/gridjs/dist/gridjs.production.min.js"></script>
+    <script type="text/javascript" src="data/BandCamp - Stats.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

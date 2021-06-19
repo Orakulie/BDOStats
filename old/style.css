@@ -1,0 +1,57 @@
+* {
+    font-family: Arial;
+   }
+   .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 7%;
+  }
+
+  #classes {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+  }
+  #infoStats{
+  display: inline-block;
+  vertical-align:top;
+  }
+
+  #info{
+    text-align: center;
+  }
+
+  #kdChart{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%; 
+  }
+  .timeButton {
+    display: inline-block;
+    width: 50px;
+  }
+  #checkboxes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  [type="checkbox"] {
+    margin-left: 10px;
+    margin-right: 10px;
+  
+  }
+#toggleCheckboxesButton{
+  display: block;
+  margin-left: auto;
+    margin-right: auto;
+    padding: 5px;text-align: center;
+}
+
+  #table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
