@@ -206,3 +206,29 @@ https://colorhunt.co/palette/179373
 #F2A365
 #ECECEC
 */
+
+
+
+
+
+
+
+
+#statTable{
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 30px;
+  color: #ECECEC;
+  border-collapse: collapse;
+  border: 2px solid #ECECEC;
+}
+
+#statTable td,th{
+  border: 1px solid #ECECEC;
+  padding: 5px 15px;
+}
+
+
+#statTable tr:nth-child(odd) td {
+  background-color: rgb(17,17,17);
+}

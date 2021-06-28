@@ -11,18 +11,45 @@
     <!-- Side navigation -->
 
     <div class="sidenav">
-        <input type="image" onclick="window.open('index.html','_self')" src="https://cdn.discordapp.com/icons/685206168179966015/d2279098f190260fac681a75a4492921.webp?size=128"
-        alt="logo">
-        
+        <input type="image" onclick="window.open('index.html','_self')"
+            src="https://cdn.discordapp.com/icons/685206168179966015/d2279098f190260fac681a75a4492921.webp?size=128"
+            alt="logo">
+
     </div>
 
     <!-- Page content -->
     <div class="main">
         <div id="tableTitle" class="title"></div>
+        <br>
+        <table id="statTable">
+            <tr>
+                <td>Kills:</td>
+                <td id="tableK"></td>
+            </tr>
+            <tr>
+                <td>Deaths:</td>
+                <td id="tableD"></td>
+            </tr>
+            <tr>
+                <td>Avg Kills:</td>
+                <td id="tableAK"></td>
+            </tr>
+            <tr>
+                <td>Avg Deaths:</td>
+                <td id="tableAD"></td>
+            </tr>
+            <tr>
+                <td>KD:</td>
+                <td id="tableKD"></td>
+            </tr>
+        </table>
+        <br>
         <div id="wrapperUp">
-            <div id="wrapper"></div></div>
+            <div id="wrapper"></div>
+        </div>
         <div id="kdChartWrapper">
-        <canvas id='kdChart' ></canvas></div>
+            <canvas id='kdChart'></canvas>
+        </div>
     </div>
 
 

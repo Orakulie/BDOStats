@@ -7,7 +7,11 @@ selectedNodewar = getNodewar(nodewarID)
 
 document.getElementById("tableTitle").innerHTML = `Nodewar ${selectedNodewar.date}`;
 
-
+document.getElementById("tableK").innerHTML = selectedNodewar.kills;
+document.getElementById("tableD").innerHTML = selectedNodewar.deaths;
+document.getElementById("tableAK").innerHTML = (selectedNodewar.kills/selectedNodewar.members.length).toFixed(2);
+document.getElementById("tableAD").innerHTML = (selectedNodewar.deaths/selectedNodewar.members.length).toFixed(2);
+document.getElementById("tableKD").innerHTML = selectedNodewar.kd;
 
 members = []
 for (let i = 0; i < rawData.length; i++) {

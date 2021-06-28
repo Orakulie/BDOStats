@@ -42,7 +42,7 @@ for (let i = 0; i < nodewars.length; i++) {
 
 
 table = new gridjs.Grid({
-    columns: [{ id: "place", name: ""},
+    columns: [
     {
         name: "Name",
         attributes: (cell) => {
@@ -169,11 +169,11 @@ function changeMembers(nws) {
             members.push(m)
     }
     //Sort Members by KD
-    members.sort((a, b) => b.kd - a.kd)
+    //members.sort((a, b) => b.kd - a.kd)
     //Set Members Index
-    members.forEach(m => {
-        m.place = members.indexOf(m) + 1
-    });
+    //members.forEach(m => {
+    //    m.place = members.indexOf(m) + 1
+    //});
 
     var tK = 0;
     var tD = 0;
@@ -216,7 +216,7 @@ function displayAll() {
     if (kdChart != null)
         kdChart.destroy();
     table.updateConfig({
-        columns: [{ id: "place", name: ""},
+        columns: [
         {
             name: "Name",
             attributes: (cell) => {

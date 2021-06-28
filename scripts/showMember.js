@@ -1,6 +1,15 @@
 function displayMember(name) {
     var m = members.find(e => e.name == name);
-    document.getElementById("tableTitle").innerHTML = `${name}<br>${m.kills}-${m.deaths}<br>${m.kd}`;
+    document.getElementById("tableTitle").innerHTML = `${name}`;
+
+    //<br><br>Total Kills:${tK}<br>Total Deaths:${tD}<br>Avg Kills:${avgK.toFixed(2)}<br>Avg Deaths:${avgD.toFixed(2)} <br> Avg KD:${avgKD.toFixed(2)}
+
+    document.getElementById("tableK").innerHTML = m.kills;
+    document.getElementById("tableD").innerHTML = m.deaths;
+    document.getElementById("tableAK").innerHTML = (m.kills/m.joined).toFixed(2);
+    document.getElementById("tableAD").innerHTML = (m.deaths/m.joined).toFixed(2);
+    document.getElementById("tableKD").innerHTML = m.kd;
+
     var d = {};
     var allKDs = []
     var nws = [];

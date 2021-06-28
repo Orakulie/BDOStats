@@ -10,8 +10,10 @@ class member {
         this.deaths = 0;
         this.kd = 0;
         this.place = 0;
+        this.joined = 0
         stats.forEach(s => {
             if (s != null) {
+                this.joined++;
                 this.kills += s[0];
                 this.deaths += s[1];
             }
@@ -91,11 +93,11 @@ for (let i = 0; i < rawData.length; i++) {
         members.push(m)
 }
 //Sort Members by KD
-members.sort((a, b) => b.kd - a.kd)
+//members.sort((a, b) => b.kd - a.kd)
 //Set Members Index
-members.forEach(m => {
-    m.place = members.indexOf(m) + 1
-});
+//members.forEach(m => {
+//    m.place = members.indexOf(m) + 1
+//});
 //#endregion
 
 //#region Extract all Nodewars
