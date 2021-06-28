@@ -1378,7 +1378,7 @@ rawData = [
     },
     {
         "familyname": "LilBenii",
-        "party": "Flex",
+        "party": "Main",
         "gs": 589,
         "class": "Maehwa",
         "nw2504": "-",
@@ -1736,6 +1736,7 @@ rawData = [
         "nw2006": "-",
         "nw2106": "-",
         "nw2306": "(10, 36)",
+        "nw2506": "-",
         "nw2706": "-"
     },
     {
@@ -1768,7 +1769,8 @@ rawData = [
         "nw2006": "-",
         "nw2106": "-",
         "nw2306": "-",
-        "nw2506": "(9, 21)"
+        "nw2506": "(9, 21)",
+        "nw2706": "-"
     },
     {
         "familyname": "BumfDacke",
