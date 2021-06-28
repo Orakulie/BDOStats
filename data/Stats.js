@@ -109,10 +109,6 @@ nwResults = [
         "result":-1
     },
     {
-
-    }
-    ,
-    {
         "id":"nw2706",
         "result":-1
     }
