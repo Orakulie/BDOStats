@@ -1,6 +1,7 @@
 * {
     font-family: Arial;
     font-size: 20px;
+    scroll-behavior: smooth;
    }
    .center {
     display: block;
@@ -212,23 +213,75 @@ https://colorhunt.co/palette/179373
 
 
 
-
-
-#statTable{
+#statTableContainer{
+  width: 25.5%;
+  display: block;
   margin-left: auto;
   margin-right: auto;
-  font-size: 30px;
+}
+
+#statTable{
+  margin: auto;
+  width: 100%;
   color: #ECECEC;
   border-collapse: collapse;
-  border: 2px solid #ECECEC;
+  border: 5px solid #f2a365;
 }
 
 #statTable td,th{
-  border: 1px solid #ECECEC;
+  border: 1px solid #f2a365;
   padding: 5px 15px;
 }
 
 
 #statTable tr:nth-child(odd) td {
   background-color: rgb(17,17,17);
+}
+
+
+
+
+#history{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+
+
+.leaderbordSubBoxText{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  padding-top: 5px;
+  padding-bottom:5px;
+  text-align: center;
+  background-color: #111;
+  border-color: #f2a365;
+  border-width: 5px;
+  border-style: solid;
+  color:white;
+}
+
+
+
+#leaderbordBox{
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  display: flex;
+  width: 80%;
+  flex-wrap: wrap;
+}
+
+
+
+.leaderbordSubBox{
+  display: flex;
+  flex-flow:column;
+  margin: 15px;
+  padding: 10px;
+  width: 40%;
 }

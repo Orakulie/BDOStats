@@ -11,42 +11,88 @@
     <!-- Side navigation -->
 
     <div class="sidenav">
-        <input type="image" onclick="window.open('index.html','_self')" src="https://cdn.discordapp.com/icons/685206168179966015/d2279098f190260fac681a75a4492921.webp?size=128"
+        <input type="image" onclick="window.open('index.html','_self')"
+            src="https://cdn.discordapp.com/icons/685206168179966015/d2279098f190260fac681a75a4492921.webp?size=128"
             alt="logo">
+
+        <a href="#nwTitle">Nodewars</a>
+        <a href="#gInfoTitle">Guild Info</a>
+        <a href="#membersTitle">Members</a>
 
     </div>
 
     <!-- Page content -->
     <div class="main">
+        <h1 class="title" id="nwTitle">Nodewars</h1>
+        <div id="allNws">
+        </div>
+        <br>
+        <canvas id="history"></canvas>
+        <br>
+        <h1 class="title" id="gInfoTitle">Guild Info</h1>
         <div id="graphs">
             <canvas id="classes"></canvas>
             <canvas id="groups"></canvas>
         </div>
-        <h1 class="title">Nodewars</h1>
-        <div id="allNws">
+        <br>
+        <div id="statTableContainer">
+            <table id="statTable">
+                <tr>
+                    <td>Winrate:</td>
+                    <td id="table1"></td>
+                </tr>
+                <tr>
+                    <td>Avg GS:</td>
+                    <td id="table2"></td>
+                </tr>
+                <tr>
+                    <td>Main Class:</td>
+                    <td id="table3"></td>
+                </tr>
+                <tr>
+                    <td>Avg Attendance:</td>
+                    <td id="table4"></td>
+                </tr>
+                <tr>
+                    <td>Avg KD:</td>
+                    <td id="table5"></td>
+                </tr>
+            </table>
         </div>
         <br>
-        
-        <br>
-        <h1 class="title">Members</h1>
+        <h1 class="title" id="membersTitle">Members</h1>
         <div id="checkboxes"></div>
         <br>
 
         <button type="button" onclick="toggleCheckboxes()" id="toggleCheckboxesButton">Uncheck All</button>
         <br>
         <div id="wrapperUp">
-        <div id="wrapper"></div></div>
+            <div id="wrapper"></div>
+        </div>
+        <!-- <br>
+        <div id="leaderbordBox">
+            <div class="leaderbordSubBox">
+            <h1 class="title" >Highest Attendance</h1>
+            <div class="leaderbordSubBoxText" id="attendance"></div></div>
+            <div class="leaderbordSubBox">
+            <h1 class="title">Highest GS</h1>
+            <div id="attendance"></div></div>
+        </div> -->
+
+
     </div>
 
 
 
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.1/chart.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.4.0/chart.min.js"></script>
     <script src="https://unpkg.com/gridjs/dist/gridjs.production.min.js"></script>
-    <script type="text/javascript" src="data/Stats.js"></script>
+
     <script type="text/javascript" src="data/data.js"></script>
-    <script src="https://spreadsheets.google.com/feeds/cells/1K8uDEI2pPVU6_pZanqBqFR6N7Se3MKaUjgKxc4jKVDw/1/public/values?alt=json-in-script&callback=doDataStats"></script>
-    <script src="https://spreadsheets.google.com/feeds/cells/1K8uDEI2pPVU6_pZanqBqFR6N7Se3MKaUjgKxc4jKVDw/2/public/values?alt=json-in-script&callback=doDataResults"></script>
+    <script
+        src="https://spreadsheets.google.com/feeds/cells/1K8uDEI2pPVU6_pZanqBqFR6N7Se3MKaUjgKxc4jKVDw/1/public/values?alt=json-in-script&callback=doDataStats"></script>
+    <script
+        src="https://spreadsheets.google.com/feeds/cells/1K8uDEI2pPVU6_pZanqBqFR6N7Se3MKaUjgKxc4jKVDw/2/public/values?alt=json-in-script&callback=doDataResults"></script>
     <script src="scripts/main.js"></script>
 </body>
 

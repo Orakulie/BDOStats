@@ -118,11 +118,11 @@ function doDataStats(json) {
         });
     
         nw = new nodewar(nodewarNames[i], membersInNw);
-        nwResults.forEach(element => {
+        /* nwResults.forEach(element => {
             if(element.id === nw.id){
                 nw.result = element.result;
             }
-        });
+        }); */
         nodewars.push(nw);
     }
     nodewars.forEach(e => {

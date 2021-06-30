@@ -65,7 +65,7 @@ table = new gridjs.Grid({
         id: 'cl',
         name: "Class"
     },
-        "Kills", "Deaths", "KD"],
+        {id:"joined",name:"Joined"},"Kills", "Deaths", "KD"],
     data: members,
     sort: true,
     style:{
@@ -300,9 +300,9 @@ function displayAll() {
 
 
 
-
+var memberClasses = {};
 function getClassData() {
-    var memberClasses = {};
+    
 
 
     members.forEach(m => {
@@ -501,3 +501,119 @@ groupChart = new Chart(
     document.getElementById('groups'),
     groupConfig
 );
+
+
+kds = []
+
+nodewars.forEach(nw => {
+    kds.push(nw.kd);
+});
+const historyData = {
+    labels: nodewarNames,
+    datasets: [{
+      data: kds
+    }]
+  };
+  Chart.defaults.color = "white";
+const historyConfig = {
+    type: 'line',
+    data: historyData,
+    options: {
+        borderColor: "#f2a365",
+        plugins: {
+            legend: {
+                display: false,
+                position: 'top',
+            },
+            title: {
+                display: true,
+                text: 'Nodewar KDs',
+                color:"#ECECEC"
+            }
+        }
+    }
+  };
+
+historyChart = new Chart(
+    document.getElementById("history"),
+    historyConfig
+)
+
+
+
+
+
+
+/* //attendance
+var attendanceBox = document.getElementById("attendance");
+highestAttendance = [];
+
+members.forEach(m => {
+    if(highestAttendance.length < 3){
+        highestAttendance.push(m)
+    }else{
+        if(highestAttendance[2].joined<m.joined){
+            highestAttendance[2] = m;
+        }
+
+        let i = 1;
+        while(i >= 0 && highestAttendance[i].joined< m.joined){
+            highestAttendance[i+1] = highestAttendance[i]
+            highestAttendance[i] = m; 
+            i--;
+        }
+    }
+});
+
+attendanceBox.innerHTML = `1. ${highestAttendance[0].name} - ${highestAttendance[0].joined}/${nodewars.length}<br>
+2. ${highestAttendance[1].name} - ${highestAttendance[1].joined}/${nodewars.length}<br>
+3. ${highestAttendance[2].name} - ${highestAttendance[2].joined}/${nodewars.length}<br>`;
+ */
+
+//GUILD INFO
+
+
+//Winrate
+var wonNws = 0;
+nodewars.forEach(nw => {
+    if(nw.result == 1)
+        wonNws++;
+    if(nw.result == 0)
+        wonNws+=0.5;
+});
+document.getElementById("table1").innerHTML = parseInt((wonNws/nodewars.length)*100)+"%";
+
+//Avg GS
+var gsSum = 0;
+members.forEach(m => {
+    gsSum += parseInt(m.gs);
+});
+document.getElementById("table2").innerHTML = parseInt(gsSum/members.length);
+
+//Main Class
+//https://stackoverflow.com/questions/50723396/get-key-of-max-value-in-dictionary-nodejs
+const result = Object.entries(memberClasses).reduce((a, b) => a[1] > b[1] ? a : b)[0]
+
+document.getElementById("table3").innerHTML = result;
+
+
+//Avg Attendance
+
+var attSum = 0;
+
+nodewars.forEach(nw => {
+    attSum +=nw.members.length;
+});
+
+document.getElementById("table4").innerHTML = (attSum/nodewars.length).toFixed(2);
+
+
+//Avg KD
+
+var kdSum = 0;
+
+nodewars.forEach(nw => {
+    kdSum +=parseFloat(nw.kd);
+});
+
+document.getElementById("table5").innerHTML = (kdSum/nodewars.length).toFixed(2);

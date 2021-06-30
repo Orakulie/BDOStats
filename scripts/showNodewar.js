@@ -14,7 +14,7 @@ document.getElementById("tableAD").innerHTML = (selectedNodewar.deaths/selectedN
 document.getElementById("tableKD").innerHTML = selectedNodewar.kd;
 
 members = []
-for (let i = 0; i < rawData.length; i++) {
+/* for (let i = 0; i < rawData.length; i++) {
     stats = [];
     for (let nw = 0; nw < amountOfNodewars; nw++) {
         key = Object.keys(rawData[i])[nw + 4];
@@ -35,7 +35,7 @@ for (let i = 0; i < rawData.length; i++) {
     if (m.stats.length > 0)
         members.push(m)
 }
-
+ */
 
 
 for (let i = 0; i < newData.length; i++) {
