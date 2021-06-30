@@ -59,7 +59,7 @@ for (let i = 0; i < newData.length; i++) {
     }
 
     m = new member(row[0],row[1],row[2],row[3],stats)
-    if (m.stats.length > 0)
+    if (m.stats[0]!= null)
         members.push(m)
 }
 
