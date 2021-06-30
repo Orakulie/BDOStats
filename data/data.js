@@ -31,10 +31,10 @@ class nodewar {
     constructor(id, members) {
         this.id = id;
 
-        this.date = id.split("w")[1];
-        this.day = this.date.slice(0, 2);
-        this.month = this.date.slice(2, 4);
-        this.date = this.day + "." + this.month;
+        this.date = id.split(" ")[1];
+        //this.day = this.date.slice(0, 2);
+        //this.month = this.date.slice(2, 4);
+        //this.date = this.day + "." + this.month;
 
         this.result = 0;
 
@@ -61,19 +61,99 @@ class nodewar {
 nodewars = []
 members = [];
 kdChart = null;
-amountOfNodewars = Object.keys(rawData[0]).length - 4;
+amountOfNodewars = 0;
 nodewarNames = []
 //#endregion
 
+
+var spData = null;
+//var spNws = [];
+var newData = [];
+function doDataStats(json) {
+    spData = json.feed.entry;
+    var row = [];
+    for (let i = 4; i < spData.length; i++) {
+        v = spData[i]["gs$cell"];
+        if(v.row == 1 && v.col > 4){
+            nodewarNames.push(v.$t);
+            continue;
+        }
+        if(v.col == 1 && row.length > 0){
+            newData.push(row);
+            row = [];
+        }
+        row.push(v.$t);
+    }
+
+    for (let i = 0; i < newData.length; i++) {
+        row = newData[i];
+
+        var rawStats = row.slice(4);
+        var stats = [];
+        for (let j = 0; j < rawStats.length; j++) {
+            if(rawStats[j] == "-"){
+                stats.push((null,null))
+                continue;
+            }
+            value = rawStats[j].split("(")[1].split(",");
+            kills = parseInt(value[0]);
+            deaths = parseInt(value[1].slice(0, -1));
+            stats.push([kills, deaths])            
+        }
+
+        m = new member(row[0],row[1],row[2],row[3],stats)
+        if (m.stats.length > 0)
+            members.push(m)
+    }
+
+
+    amountOfNodewars = nodewarNames.length;
+
+    for (let i = 0; i < nodewarNames.length; i++) {
+        membersInNw = [];
+        members.forEach(m => {
+            if (m.stats[i] != null) {
+                membersInNw.push(m);
+            }
+        });
+    
+        nw = new nodewar(nodewarNames[i], membersInNw);
+        nwResults.forEach(element => {
+            if(element.id === nw.id){
+                nw.result = element.result;
+            }
+        });
+        nodewars.push(nw);
+    }
+    nodewars.forEach(e => {
+        tK += e.kills;
+        tD += e.deaths;
+    });
+
+}
+function doDataResults(json) {
+    spData = json.feed.entry;
+    var row = [];
+    for (let i = 2; i < spData.length; i+=2) {
+        v = spData[i]["gs$cell"];
+        getNodewar(v.$t).result = spData[i+1]["gs$cell"].$t
+    }
+
+}
+
+
+
+
+
 //#region Get all Nodewar Names
-for (let i = 0; i < amountOfNodewars; i++) {
+/* for (let i = 0; i < amountOfNodewars; i++) {
     key = Object.keys(rawData[0])[i + 4];
     nodewarNames.push(key)
-}
+} */
 //#endregion
 
 //#region Extract all Members
-for (let i = 0; i < rawData.length; i++) {
+/* for (let i = 0; i < rawData.length; i++) {
     stats = [];
     for (let nw = 0; nw < amountOfNodewars; nw++) {
         key = Object.keys(rawData[i])[nw + 4];
@@ -91,7 +171,7 @@ for (let i = 0; i < rawData.length; i++) {
     m = new member(rawData[i].familyname, rawData[i].party, rawData[i].gs, rawData[i].class, stats)
     if (m.stats.length > 0)
         members.push(m)
-}
+} */
 //Sort Members by KD
 //members.sort((a, b) => b.kd - a.kd)
 //Set Members Index
@@ -101,7 +181,7 @@ for (let i = 0; i < rawData.length; i++) {
 //#endregion
 
 //#region Extract all Nodewars
-for (let i = 0; i < nodewarNames.length; i++) {
+/* for (let i = 0; i < nodewarNames.length; i++) {
     membersInNw = [];
     members.forEach(m => {
         if (m.stats[i] != null) {
@@ -116,7 +196,7 @@ for (let i = 0; i < nodewarNames.length; i++) {
         }
     });
     nodewars.push(nw);
-}
+} */
 //#endregion
 
 var tK = 0;
@@ -124,10 +204,10 @@ var tD = 0;
 var avgK = 0;
 var avgD = 0;
 var avgKD = 0;
-nodewars.forEach(e => {
+/* nodewars.forEach(e => {
     tK += e.kills;
     tD += e.deaths;
-});
+}); */
 avgK = tK / (nodewars.length * 25);
 avgD = tD / (nodewars.length * 25);
 avgKD = avgK / avgD;

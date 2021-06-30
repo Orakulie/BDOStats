@@ -147,7 +147,7 @@ function toggleCheckboxesVisiblity(b) {
 
 function changeMembers(nws) {
     members = []
-    for (let i = 0; i < rawData.length; i++) {
+/*     for (let i = 0; i < rawData.length; i++) {
         stats = [];
         for (let nw = 0; nw < amountOfNodewars; nw++) {
             key = Object.keys(rawData[i])[nw + 4];
@@ -165,6 +165,30 @@ function changeMembers(nws) {
 
         }
         m = new member(rawData[i].familyname, rawData[i].party, rawData[i].gs, rawData[i].class, stats)
+        if (m.stats.length > 0)
+            members.push(m)
+    } */
+    for (let i = 0; i < newData.length; i++) {
+        row = newData[i];
+
+        var rawStats = row.slice(4);
+        var stats = [];
+
+        for (let j = 0; j < rawStats.length; j++) {
+            if (!nws.includes(nodewarNames[j]))
+                continue;
+
+            if(rawStats[j] == "-"){
+                stats.push((null,null))
+                continue;
+            }
+            value = rawStats[j].split("(")[1].split(",");
+            kills = parseInt(value[0]);
+            deaths = parseInt(value[1].slice(0, -1));
+            stats.push([kills, deaths])            
+        }
+
+        m = new member(row[0],row[1],row[2],row[3],stats)
         if (m.stats.length > 0)
             members.push(m)
     }

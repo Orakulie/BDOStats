@@ -18,7 +18,7 @@ function displayMember(name) {
             nws.push(nodewarNames[i]);
     }
 
-    for (let i = 0; i < nws.length; i++) {
+    for (let i = 0; i < nodewars.length; i++) {
 
         if (m.stats[i] != null) {
             if (m.stats[i][1] > 0) {
@@ -27,10 +27,10 @@ function displayMember(name) {
                 kd = m.stats[i][0];
             }
             allKDs.push(kd);
-            date = nws[i].split("w")[1];
-            day = date.slice(0, 2);
-            month = date.slice(2, 4);
-            d[day + "." + month] = `${m.stats[i][0]} | ${m.stats[i][1]} (${kd})`;
+           // date = nws[i].split("w")[1];
+           // day = date.slice(0, 2);
+            //month = date.slice(2, 4);
+            d[nodewars[i].date] = `${m.stats[i][0]} | ${m.stats[i][1]} (${kd})`;
         }
     }
     var table = new gridjs.Grid({

@@ -35,6 +35,39 @@ for (let i = 0; i < rawData.length; i++) {
     if (m.stats.length > 0)
         members.push(m)
 }
+
+
+
+for (let i = 0; i < newData.length; i++) {
+    row = newData[i];
+
+    var rawStats = row.slice(4);
+    var stats = [];
+
+    for (let j = 0; j < rawStats.length; j++) {
+        if (nodewarNames[j] != nodewarID)
+            continue;
+
+        if(rawStats[j] == "-"){
+            stats.push((null,null))
+            continue;
+        }
+        value = rawStats[j].split("(")[1].split(",");
+        kills = parseInt(value[0]);
+        deaths = parseInt(value[1].slice(0, -1));
+        stats.push([kills, deaths])            
+    }
+
+    m = new member(row[0],row[1],row[2],row[3],stats)
+    if (m.stats.length > 0)
+        members.push(m)
+}
+
+
+
+
+
+
 //Sort Members by KD
 members.sort((a, b) => b.kd - a.kd)
 //Set Members Index
