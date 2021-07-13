@@ -19,7 +19,7 @@ class member {
             }
         });
         if (this.deaths != 0) {
-            this.kd = parseFloat(this.kills / this.deaths).toFixed(2);
+            this.kd = parseFloat(parseFloat(this.kills / this.deaths).toFixed(2));
         } else {
             this.kd = this.kills;
         }
@@ -84,7 +84,7 @@ function doDataStats(json) {
         }
         row.push(v.$t);
     }
-
+    newData.push(row)
     for (let i = 0; i < newData.length; i++) {
         row = newData[i];
 
