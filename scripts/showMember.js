@@ -68,13 +68,27 @@ function displayMember(name) {
     }).render(document.getElementById("wrapper"));
 
     avgKDs = [];
-    nodewars.forEach(nw => {
+    deviation = [];
+    /* nodewars.forEach(nw => {
         joinedNws = Object.keys(d)
         date = nw.date
         if (joinedNws.includes(date)) {
             avgKDs.push(nw.kd);
+            deviation.push(m.kd-nw.kd)
         }
-    });
+    }); */
+
+    for (let i = 0; i < nodewars.length; i++) {
+        joinedNws = Object.keys(d)
+        date = nodewars[i].date
+        if (joinedNws.includes(date)) {
+            avgKDs.push(nodewars[i].kd);
+           // deviation.push(m.stats[i][0]/m.stats[i][1]-nodewars[i].kd)
+        }
+    }
+
+
+
     const data = {
         labels: Object.keys(d),
         datasets: [{
@@ -87,7 +101,13 @@ function displayMember(name) {
             backgroundColor: 'rgb(123, 99, 255)',
             borderColor: 'rgb(123, 99, 255)',
             data: avgKDs
-        }]
+        }/* ,
+        {
+            label: "Performance",
+            backgroundColor: 'rgb(123, 200, 255)',
+            borderColor: 'rgb(123, 200, 255)',
+            data: deviation
+        } */]
     };
 
     const config = {

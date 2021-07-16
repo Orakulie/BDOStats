@@ -65,7 +65,7 @@ table = new gridjs.Grid({
         id: 'cl',
         name: "Class"
     },
-        {id:"joined",name:"Joined"},"Kills", "Deaths", "KD"],
+        {id:"joined",name:"Joined"},"Kills", "Deaths", "KD", "avgK"],
     data: members,
     sort: true,
     style:{
@@ -263,7 +263,7 @@ function displayAll() {
             id: 'cl',
             name: "Class"
         },
-            "Kills", "Deaths", "KD"],
+            "Kills", "Deaths", "KD", "avgK"],
         data: members,
         sort: true,
         fixedHeader: true,

@@ -18,6 +18,7 @@ class member {
                 this.deaths += s[1];
             }
         });
+        this.avgK = parseFloat(parseFloat(this.kills/this.joined).toFixed(2));
         if (this.deaths != 0) {
             this.kd = parseFloat(parseFloat(this.kills / this.deaths).toFixed(2));
         } else {
