@@ -121,7 +121,7 @@ function displayMember(name) {
     );
 
 }
-
+function mainInit(){
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const name = urlParams.get('name');
@@ -130,7 +130,7 @@ displayMember(name);
 
 
 
-
+}
 
 
 
