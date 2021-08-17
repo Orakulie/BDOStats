@@ -27,9 +27,6 @@ function displayMember(name) {
                 kd = m.stats[i][0];
             }
             allKDs.push(kd);
-           // date = nws[i].split("w")[1];
-           // day = date.slice(0, 2);
-            //month = date.slice(2, 4);
             d[nodewars[i].date] = `${m.stats[i][0]} | ${m.stats[i][1]} (${kd})`;
         }
     }
