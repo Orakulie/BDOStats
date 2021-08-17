@@ -15,30 +15,6 @@ function mainInit(){
     document.getElementById("tableKD").innerHTML = selectedNodewar.kd;
 
     members = []
-    /* for (let i = 0; i < rawData.length; i++) {
-        stats = [];
-        for (let nw = 0; nw < amountOfNodewars; nw++) {
-            key = Object.keys(rawData[i])[nw + 4];
-            if (key != nodewarID)
-                continue;
-            value = rawData[i][key];
-            if (value != "-") {
-                value = value.split("(")[1].split(",");
-                kills = parseInt(value[0]);
-                deaths = parseInt(value[1].slice(0, -1));
-                stats.push([kills, deaths])
-            } else {
-                stats.push((null, null))
-            }
-
-        }
-        m = new member(rawData[i].familyname, rawData[i].party, rawData[i].gs, rawData[i].class, stats)
-        if (m.stats.length > 0)
-            members.push(m)
-    }
-    */
-
-
     for (let i = 0; i < newData.length; i++) {
         row = newData[i];
 
