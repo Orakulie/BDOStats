@@ -1,5 +1,5 @@
 function displayMember(name) {
-    var m = members.find(e => e.name == name);
+    m = members.find(e => e.name == name);
     document.getElementById("tableTitle").innerHTML = `${name}`;
 
     //<br><br>Total Kills:${tK}<br>Total Deaths:${tD}<br>Avg Kills:${avgK.toFixed(2)}<br>Avg Deaths:${avgD.toFixed(2)} <br> Avg KD:${avgKD.toFixed(2)}
