@@ -10,8 +10,9 @@ function displayMember(name) {
     document.getElementById("tableAD").innerHTML = (m.deaths/m.joined).toFixed(2);
     document.getElementById("tableKD").innerHTML = m.kd;
 
-    var d = {};
-    var allKDs = []
+    d = {};
+    allKDs = [];
+    allKills = [];
     var nws = [];
 
     for (let i = 0; i < nodewarNames.length; i++) {
@@ -27,6 +28,7 @@ function displayMember(name) {
                 kd = m.stats[i][0];
             }
             allKDs.push(kd);
+            allKills.push(m.stats[i][0])
             d[nodewars[i].date] = `${m.stats[i][0]} | ${m.stats[i][1]} (${kd})`;
         }
     }
@@ -65,22 +67,13 @@ function displayMember(name) {
     }).render(document.getElementById("wrapper"));
 
     avgKDs = [];
-    deviation = [];
-    /* nodewars.forEach(nw => {
-        joinedNws = Object.keys(d)
-        date = nw.date
-        if (joinedNws.includes(date)) {
-            avgKDs.push(nw.kd);
-            deviation.push(m.kd-nw.kd)
-        }
-    }); */
-
+    avgKills = [];
     for (let i = 0; i < nodewars.length; i++) {
         joinedNws = Object.keys(d)
         date = nodewars[i].date
         if (joinedNws.includes(date)) {
             avgKDs.push(nodewars[i].kd);
-           // deviation.push(m.stats[i][0]/m.stats[i][1]-nodewars[i].kd)
+            avgKills.push(nodewars[i].kills/nodewars[i].members.length)
         }
     }
 
@@ -98,13 +91,7 @@ function displayMember(name) {
             backgroundColor: 'rgb(123, 99, 255)',
             borderColor: 'rgb(123, 99, 255)',
             data: avgKDs
-        }/* ,
-        {
-            label: "Performance",
-            backgroundColor: 'rgb(123, 200, 255)',
-            borderColor: 'rgb(123, 200, 255)',
-            data: deviation
-        } */]
+        }]
     };
 
     const config = {
@@ -112,7 +99,7 @@ function displayMember(name) {
         data: data,
         options: {}
     };
-    kdChart = new Chart(
+     kdChart = new Chart(
         document.getElementById('kdChart'),
         config
     );
@@ -125,11 +112,48 @@ const name = urlParams.get('name');
 
 displayMember(name);
 
-
+document.getElementById("selectDropdown").onchange = (e) =>{
+    updateGraph(e.target.value);
+}
 
 }
 
-
+function updateGraph(value){
+    let data = {};
+    if(value == "KD"){
+        data = {
+            labels: Object.keys(d),
+            datasets: [{
+                label: m.name,
+                backgroundColor: 'rgb(255, 99, 132)',
+                borderColor: 'rgb(255, 99, 132)',
+                data: allKDs
+            }, {
+                label: "Avg",
+                backgroundColor: 'rgb(123, 99, 255)',
+                borderColor: 'rgb(123, 99, 255)',
+                data: avgKDs
+            }]
+        };
+    }else{
+        data = {
+            labels: Object.keys(d),
+            datasets: [{
+                label: m.name,
+                backgroundColor: 'rgb(255, 99, 132)',
+                borderColor: 'rgb(255, 99, 132)',
+                data: allKills
+            }, {
+                label: "Avg",
+                backgroundColor: 'rgb(123, 99, 255)',
+                borderColor: 'rgb(123, 99, 255)',
+                data: avgKills
+            }]
+        };
+    }
+    kdChart.data = data;
+    kdChart.update();
+}
 
 
 
